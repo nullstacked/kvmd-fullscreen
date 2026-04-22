@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = kvmd
+
+[Action]
+Description = Applying kvmd-fullscreen patches...
+When = PostTransaction
+Exec = /usr/share/kvmd-fullscreen/apply-patches.sh

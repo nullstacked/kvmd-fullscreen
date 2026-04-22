@@ -1,0 +1,67 @@
+:root {
+	--cs-fullscreen-bg: rgba(30,30,30,0.85);
+	--cs-fullscreen-bg-hover: rgba(60,60,60,1);
+	--cs-fullscreen-fg: rgba(255,255,255,0.85);
+	--cs-fullscreen-fg-hover: rgba(255,255,255,1);
+	--cs-fullscreen-width: 16px;
+	--cs-fullscreen-height: 30px;
+	--cs-fullscreen-top: 170px;  /* below paste-clip at 135+30+5 */
+}
+
+.kvm-fullscreen-btn {
+	position: fixed;
+	top: var(--cs-fullscreen-top);
+	right: 0;
+	z-index: 99999;
+	width: var(--cs-fullscreen-width);
+	height: var(--cs-fullscreen-height);
+	background: var(--cs-fullscreen-bg);
+	color: var(--cs-fullscreen-fg);
+	border: var(--border-navbar-menu-active-2px, 2px solid #333);
+	border-right: none;
+	border-radius: 4px 0 0 4px;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.15s, color 0.15s;
+	user-select: none;
+}
+
+.kvm-fullscreen-btn:hover {
+	background: var(--cs-fullscreen-bg-hover);
+	color: var(--cs-fullscreen-fg-hover);
+}
+
+.kvm-fullscreen-btn svg {
+	width: 12px;
+	height: 12px;
+	fill: currentColor;
+	pointer-events: none;
+}
+
+/* Style the gear icon inside the navbar-show-button */
+#navbar-show-button svg {
+	width: 12px;
+	height: 12px;
+	fill: currentColor;
+	pointer-events: none;
+	vertical-align: middle;
+}
+#navbar-show-button {
+	padding: 0 !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	/* Force always-visible — don't only show in full-tab mode */
+	opacity: 1 !important;
+	/* Match paste-clip and fullscreen button sizes */
+	width: 16px !important;
+	height: 30px !important;
+	top: 100px !important;
+	writing-mode: horizontal-tb !important;  /* override navbar.css vertical-lr */
+}
+#navbar-show-button.hidden {
+	opacity: 1 !important;
+}

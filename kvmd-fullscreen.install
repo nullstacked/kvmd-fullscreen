@@ -1,0 +1,13 @@
+post_install() {
+    echo ">>> Running kvmd-fullscreen patches..."
+    /usr/share/kvmd-fullscreen/apply-patches.sh
+}
+
+post_upgrade() {
+    echo ">>> Running kvmd-fullscreen patches..."
+    /usr/share/kvmd-fullscreen/apply-patches.sh
+}
+
+pre_remove() {
+    echo ">>> kvmd-fullscreen removed. Run 'pacman -S kvmd' to restore original files."
+}
