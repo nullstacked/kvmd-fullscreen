@@ -1,6 +1,6 @@
 # Maintainer: nullstacked
 pkgname=kvmd-fullscreen
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Floating browser-fullscreen button for PiKVM Web UI (so Alt+Tab etc. go to the target)"
 arch=('any')

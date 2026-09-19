@@ -1,9 +1,10 @@
 :root {
+	/* 2026-09-19: tab 16 -> 28 px wide, icon 12 -> 16 px, so it is a thumb target on a phone; height unchanged so the stack spacing holds */
 	--cs-fullscreen-bg: rgba(30,30,30,0.85);
 	--cs-fullscreen-bg-hover: rgba(60,60,60,1);
 	--cs-fullscreen-fg: rgba(255,255,255,0.85);
 	--cs-fullscreen-fg-hover: rgba(255,255,255,1);
-	--cs-fullscreen-width: 16px;
+	--cs-fullscreen-width: 28px;
 	--cs-fullscreen-height: 30px;
 	--cs-fullscreen-top: 170px;  /* below paste-clip at 135+30+5 */
 }
@@ -35,16 +36,16 @@
 }
 
 .kvm-fullscreen-btn svg {
-	width: 12px;
-	height: 12px;
+	width: 16px;
+	height: 16px;
 	fill: currentColor;
 	pointer-events: none;
 }
 
 /* Style the gear icon inside the navbar-show-button */
 #navbar-show-button svg {
-	width: 12px;
-	height: 12px;
+	width: 16px;
+	height: 16px;
 	fill: currentColor;
 	pointer-events: none;
 	vertical-align: middle;
